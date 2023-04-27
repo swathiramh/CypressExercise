@@ -62,14 +62,14 @@ describe('Create JIRA issue', () => {
 
   it('passes', () => {
     jiraIssuePage.clickCreateIssueButton()
-    jiraIssuePage.selectIssueType(2)
-    jiraIssuePage.selectIssuePriority(4)
+    jiraIssuePage.selectIssueType(2)  //2 - Story
+    jiraIssuePage.selectIssuePriority(4)  //4- High
     jiraIssuePage.enterSummary('Testcase for Jira Clone')
     jiraIssuePage.enterDescription('As an applicant I need to create a testcase for a Jira clone')
     jiraIssuePage.setAssignee('Captain')
     jiraIssuePage.clickCreateIssue()
     jiraIssuePage.clickOnIssue(4)
-    jiraIssuePage.changeStatusTo(2)
+    jiraIssuePage.changeStatusTo(2) //2-In Progress
     jiraIssuePage.changePriorityTo('Highest')
     jiraIssuePage.closeDialog()
   })
