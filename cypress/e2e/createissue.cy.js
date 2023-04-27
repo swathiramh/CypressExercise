@@ -19,7 +19,7 @@ describe('Create JIRA issue', () => {
     cy.get("input[formcontrolname='title']").type("Testcase for Jira Clone")
 
     //Enter a description „As an applicant I need to create a testcase for a Jira clone”  
-    cy.get("div[class='ql-editor ql-blank'] p").type("As an applicant I need to create a testcase for a Jira clone")
+    cy.get("div[data-gramm='false']").type("As an applicant I need to create a testcase for a Jira clone")
 
     //Set the assignee to „Captain”
     cy.get("issue-assignees-select nz-select").click()
