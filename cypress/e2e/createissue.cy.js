@@ -36,7 +36,7 @@ describe('Create JIRA issue', () => {
     cy.get("j-button[icon='times'] button[type='button']").click()
 
 
-
+    // change the status to "In Progress" has to be done 
 
   })
 })
