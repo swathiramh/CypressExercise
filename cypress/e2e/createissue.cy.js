@@ -22,7 +22,6 @@ describe('Create JIRA issue', () => {
     cy.get("div[class='ql-editor ql-blank'] p").type("As an applicant I need to create a testcase for a Jira clone")
 
     //Set the assignee to „Captain”
-    //cy.get("nz-select[nzmode='multiple'] nz-select-top-control").type('{upArrow}').type('{upArrow}').type('{upArrow}').type('{upArrow}').type('{upArrow}').type('{upArrow}').type('{enter}')
     cy.get("issue-assignees-select nz-select").click()
     cy.get("nz-option-item:nth-child(3)").click()
 
