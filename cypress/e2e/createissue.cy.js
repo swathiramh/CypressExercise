@@ -9,7 +9,7 @@ class JiraIssuePage {
 
   selectIssueType(issueType) {
     cy.get("div[class='form-group'] issue-type-select").click()
-    cy.get(`nz-option-item:nth-child(${issueType})`).click()
+    cy.get(`span.ml-3.font-semibold.text-textMedium.text-13:contains(${issueType})`).click()
   }
 
   selectIssuePriority(issuePriority) {
@@ -62,8 +62,8 @@ describe('Create JIRA issue', () => {
 
   it('passes', () => {
     jiraIssuePage.clickCreateIssueButton()
-    jiraIssuePage.selectIssueType(2)  //2 - Story
-    jiraIssuePage.selectIssuePriority(4)  //4- High
+    jiraIssuePage.selectIssueType('Story')
+    jiraIssuePage.selectIssuePriority(4) //4-High
     jiraIssuePage.enterSummary('Testcase for Jira Clone')
     jiraIssuePage.enterDescription('As an applicant I need to create a testcase for a Jira clone')
     jiraIssuePage.setAssignee('Captain')
